@@ -1,0 +1,74 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: $main-font;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+@mixin transition($duration) {
+  transition-duration: $duration;
+  -webkit-transition-duration: $duration;
+  -moz-transition-duration: $duration;
+  -o-transition-duration: $duration;
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+.nopadding{
+  padding: 0!important;
+
+  @media screen and (max-width: $mobile){
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+  }
+}
+
+@media screen and (min-width: $mobile){
+  .nopaddingleft{
+    padding-left: 0!important;
+  }
+
+  .nopaddingright{
+    padding-right: 0!important;
+  }
+}
+
+h1, h2, h3{
+  font-family: $title-font;
+  font-weight: 700;
+}
+
+p{
+  font-weight: 300;
+  font-size: 16px;
+  color: $text_color;
+  line-height: 23px;
+  margin: 15px 0;
+}
+
+section{
+  padding: 75px 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.title{
+  margin-bottom: 60px;
+  h3{
+    font-size: 30px;
+
+    span{
+      font-weight: 300;
+      font-family: $title-font;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+header{
+  height: 100vh;
+  background: #fff;
+  // background-image: url('../img/hero.jpg');
+  // background-size: cover;
+  // background-position: 50% 25%;
+  // background-repeat: no-repeat;
+  position: relative;
+
+
+  // .overlay{
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: rgba(40, 40, 40, .6);
+  // }
+
+  .header-img{
+    margin-top: 120px;
+  }
+
+  @media screen and (max-width: $tablet){
+    height: auto;
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 30px;
+    .header-img{
+      margin-top: 90px;
+    }
+
+  }
+
+  @media screen and (max-width: $mobile){
+
+
+  }
+
+  .slogan{
+    position: relative;
+    z-index: 100;
+    margin-top: 250px;
+    h4{
+      color: $secondary_color;
+
+    }
+    h1{
+      color: $secondary_color;
+      font-size: 50px;
+      letter-spacing: -.8px;
+    }
+
+    .learnmore{
+      background-color: $primary_color;
+      color: #fff;
+      text-decoration: none;
+      padding: 11px 28px;
+      display: inline-block;
+      margin-top: 50px;
+      font-size: 17px;
+      font-weight: 400;
+      font-family: $title-font;
+      @include transition(.4s);
+
+      &:hover, &:focus{
+        background-color: $primary_color_hover;
+        @include transition(.2s);
+      }
+    }
+
+    @media screen and (max-width: $tablet){
+      margin-top: 30px;
+    }
+
+    @media screen and (max-width: $mobile){
+      text-align: center;
+      margin-top: 30px;
+
+      .learnmore{
+        margin-top: 20px;
+      }
+
+      h1{
+        font-size: 30px;
+      }
+
+      h4{
+        font-size: 17px;
+      }
+    }
+  }
+}

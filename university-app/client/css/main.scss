@@ -1,0 +1,458 @@
+@import "partials/utilities";
+@import "partials/base";
+@import "partials/header";
+@import "partials/nav";
+@import "partials/btns";
+@import "partials/loader";
+
+*{
+  outline: none;
+}
+footer{
+  padding-bottom: 100px;
+}
+
+.certificate{
+  border:4px solid $primary_color;
+  border-radius: 16px;
+  padding: 15px;
+  text-align: center;
+
+  .inner-border{
+    padding: 30px 50px;
+    border: 2px solid #dadada;
+    border-radius: 10px;
+  }
+
+  .cert-bottom{
+    margin-top: 50px;
+    .cert_id{
+      background-color: $green_color;
+      color: #fff;
+      padding: 20px;
+      font-weight: 700;
+      font-size: 20px;
+      font-family: $title_font;
+      letter-spacing: .4px;
+      margin-bottom: 20px;
+      margin-top: 40px;
+
+      span{
+        display: block;
+        font-weight: 400;
+        font-size: 15px;
+      }
+    }
+    img{
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  .cert-title{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: $main-font;
+    letter-spacing: 1.5px;
+    color: $primary_color;
+    margin-bottom: 20px;
+  }
+
+  p{
+    font-family: $title_font;
+  }
+
+  .person{
+    p{
+      font-size: 17px;
+      font-weight: 400;
+      font-family: $title_font;
+    }
+    h3{
+      font-family: 'Kaushan Script', cursive;
+      font-size: 60px;
+      border-bottom: 2px solid #222;
+    }
+  }
+
+  .course{
+    margin-bottom: 30px;
+    p{
+      font-size: 17px;
+      font-weight: 400;
+      font-family: $title_font;
+      margin-top: 30px;
+      margin-bottom: 5px;
+    }
+    h3{
+      font-size: 34px;
+      margin-top: 0;
+    }
+  }
+
+  .date{
+    p{
+      font-size: 17px;
+      font-weight: 400;
+      font-family: $title_font;
+      margin-top: 30px;
+      margin-bottom: 5px;
+    }
+    h4{
+      color: #888;
+      margin-top: 0;
+    }
+  }
+}
+
+.modal{
+  .modal-header{
+    h4{
+      font-weight: 700;
+    }
+  }
+}
+
+.programs_list{
+  list-style: none;
+
+  a{
+    color: $primary_color;
+    font-weight: 400;
+    font-family: $title_font;
+  }
+}
+
+.requestAff, .approveAff, .enrollCourseModal, .takeAdm, .issueCert{
+  padding-top: 100px;
+  input[type='text']{
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+
+  table{
+    width: 100%;
+
+    a{
+      color: $primary_color;
+    }
+
+    .green{
+      color: $green_color;
+    }
+
+    .red{
+      color: $red_color;
+    }
+
+    th{
+      background-color: $primary_color;
+      color: #fff;
+    }
+    td{
+      height: 40px;
+      background-color: $light_grey;
+    }
+  }
+}
+
+#historian{
+
+  #history{
+    padding-top: 70px;
+  }
+
+  .historian-status{
+    color: #fff;
+    background-color: $green_color;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: 700;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-family: $title_font;
+
+
+    @media screen and (max-width: $mobile){
+      float: none!important;
+      clear: both!important;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      display: block;
+    }
+  }
+
+  .no-blocks{
+    color: $primary_color;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: $title_font;
+
+    @media screen and (max-width: $mobile){
+      float: none!important;
+      clear: both!important;
+      text-align: center;
+    }
+  }
+
+  .table{
+
+
+    tr{
+      height: 50px;
+
+      td{
+        vertical-align: middle;
+        background-color: $light_grey;
+        border-color: #fff;
+        color: #777;
+      }
+      th{
+        vertical-align: middle;
+        background-color: #dadada;
+        color: #222;
+        border-color: #dadada;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .fetch{
+    display: table;
+    background-color: $primary_color;
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 35px;
+    border-radius: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    @include transition(.3s);
+
+    &:hover, &:focus{
+      background-color: $primary_color_hover;
+      @include transition(.3s);
+    }
+  }
+}
+
+#verifier{
+  p{color: $light_grey;}
+  background-color: $primary_color;
+  .title{
+    margin-bottom: 20px;
+
+    h3{color:#fff;}
+  }
+
+  .search-cont{
+    width: 100%;
+    height: 60px;
+    position: relative;
+
+    .verify-btn{
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      height: 50px;
+      width: 100px;
+      border: 0;
+      background-color: $green_color;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 4px;
+      @include transition(.3s);
+
+      &:hover{
+        background-color: $green_color_hover;
+        @include transition(.3s);
+      }
+    }
+    input{
+      width: 100%;
+      height: 60px;
+      border-radius: 6px;
+      box-shadow: 0;
+      border: 0;
+      padding-left: 20px;
+    }
+  }
+}
+
+#about-sec, #university, #college, #students{
+  padding: 0;
+  // background-color: #f5f5f5;
+  .square-img-cont{
+    background-color: #dadada;
+    width: 100%;
+    padding-top: 75%; /* 1:1 Aspect Ratio */
+    position: relative; /* If you want text inside of it */
+    overflow: hidden;
+    margin-bottom: 60px;
+
+    img{
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100%;
+    }
+  }
+  .about-box{
+    padding: 80px 100px;
+    padding-bottom: 0;
+
+    @media screen and (max-width: $mobile){
+      padding: 60px 20px;
+    }
+  }
+}
+
+#university, #college, #students{
+  .content-box{
+    padding: 0 100px;
+
+    @media screen and (max-width: $tablet){
+      padding-bottom: 40px;
+    }
+
+    @media screen and (max-width: $mobile){
+      padding: 0px 20px;
+      padding-bottom: 50px;
+    }
+
+    .transactions{
+      padding-top: 30px;
+
+      #college_list, #student_list{
+        margin-bottom: 50px;
+
+        table{
+          width: 100%;
+
+          a{
+            color: $primary_color;
+          }
+
+          .green{
+            color: $green_color;
+          }
+
+          .red{
+            color: $red_color;
+          }
+
+          th{
+            background-color: $primary_color;
+            color: #fff;
+          }
+          td{
+            height: 40px;
+            background-color: $light_grey;
+          }
+        }
+      }
+
+      .transaction{
+        background-color: $light_grey;
+        padding: 7px 20px;
+        border-left: 6px solid $primary_color;
+        margin-top: 20px;
+
+        a{
+          font-size: 16px;
+          font-weight: 400;
+          font-family: $title_font;
+        }
+      }
+    }
+
+    .title{
+      margin-bottom: 20px;
+    }
+
+    .badge-top{
+      width: 60px;
+      height: 80px;
+      background-color: $primary_color;
+      text-align: center;
+
+      i{
+        color: #fff;
+        line-height: 80px;
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+#features-sec{
+  background-color: #f5f5f5;
+
+  .feature-box{
+    background-color: #fff;
+    width: 100%;
+    height: 270px;
+    margin: 15px 0;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &:hover, &:focus{
+      .top-part{
+        transform: translateY(-270px);
+      }
+      .bottom-part{
+        transform: translateY(-270px);
+      }
+    }
+
+    .bottom-part{
+      padding: 50px 40px;
+      height: 270px;
+      background-color: $primary_color;
+      @include transition(.3s);
+
+      p{
+        color: #fff;
+      }
+    }
+
+
+    .top-part{
+      text-align: center;
+      padding: 30px 40px;
+      height: 270px;
+      @include transition(.5s);
+      h3{
+        color: $primary_color;
+        margin-bottom: 0px;
+      }
+      p{
+        margin-top: 5px;
+      }
+      .icon{
+        height: 80px;
+        width: 80px;
+        border: 1px solid #dadada;
+        margin: 0 auto;
+        border-radius: 100px;
+
+        i{
+          color: $primary_color;
+          font-size: 40px;
+          line-height: 80px;
+          text-align: center;
+        }
+      }
+    }
+
+    -webkit-box-shadow: 0px 46px 76px -13px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 46px 76px -13px rgba(0,0,0,0.1);
+box-shadow: 0px 46px 76px -13px rgba(0,0,0,0.1);
+  }
+}

@@ -1,0 +1,24 @@
+          <div class="col-md-12">
+            <div class="pull-right no-blocks">
+              Total Blocks: 13
+            </div>
+            <div class="historian-status">
+              HyperLedger Transaction Blocks: success
+            </div>
+            <div class="table-responsive">
+              <table id="tt" class="table table-bordered" align="center">
+                <tbody>
+                  <tr>
+                    <th>Transaction Hash</th>
+                    <th>Transaction Type</th>
+                    <th>TimeStamp</th>
+                  </tr>
+                  <tr>
+                    <td>1416f68459cc344ec99f8c9e53cc1c7e705f2abab7f6da4f9d43b9d114def969#0</td>
+                    <td>org.hyperledger.composer.system.AddParticipant</td>
+                    <td>2018-12-10T12:59:34.782Z</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
